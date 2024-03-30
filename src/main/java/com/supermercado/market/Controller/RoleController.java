@@ -3,6 +3,7 @@ package com.supermercado.market.Controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,6 +15,7 @@ import com.supermercado.market.Service.RoleService;
 
 @RestController
 @RequestMapping("/roles")
+@CrossOrigin(origins = "http://localhost:51496")
 public class RoleController {
 
     @Autowired
@@ -29,5 +31,5 @@ public class RoleController {
         return roleService.addRole(role);
     }
 
-    // Otros métodos para actualizar y eliminar roles si es necesario
+  
 }

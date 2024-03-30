@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.supermercado.market.Domain.Role;
 
 public interface RoleRepository extends JpaRepository<Role, Long> {
-    // Puedes añadir métodos personalizados para consultas específicas si es necesario
+    
 }

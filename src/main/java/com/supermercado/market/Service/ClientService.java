@@ -25,5 +25,18 @@ public class ClientService {
         return clientRepository.save(client);
     }
 
-    // Otros métodos para actualizar y eliminar clientes si es necesario
+    public void deleteClient(Long id) {
+        clientRepository.deleteById(id);
+    }
+
+    public Client updateClient(Long id, Client client) {
+     
+        Client existingClient = clientRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Cliente no encontrado con id: " + id));
+        existingClient.setName(client.getName());
+        existingClient.setRole(client.getRole());
+        return clientRepository.save(existingClient);
+    }
+
+ 
 }

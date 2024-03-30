@@ -24,5 +24,4 @@ public class RoleService {
         return roleRepository.save(role);
     }
 
-    // Otros métodos para actualizar y eliminar roles si es necesario
 }
